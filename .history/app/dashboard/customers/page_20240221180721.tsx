@@ -10,8 +10,7 @@ export default async function Page() {
   const customers = await fetchAllCustomers();
   // console.log(customers);
   return (
-    //render customers 
     <CustomersCard customers={customers}/>
-
+    
   );
 }
