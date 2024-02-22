@@ -1,4 +1,4 @@
-import { CustomerField } from '@/app/lib/definitions'
+import { Customer } from '@/app/lib/definitions'
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
@@ -6,7 +6,7 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import { lusitana } from '@/app/ui/fonts';
 
-export default function CustomersCard({ customers }: { customers: CustomerField[] }) {
+export default function CustomersCard({ customers }: { customers: Customer[] }) {
     return (
         <>
             <h1 style={{

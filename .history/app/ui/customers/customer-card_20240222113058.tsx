@@ -1,4 +1,4 @@
-import { CustomerField } from '@/app/lib/definitions'
+import { Customer, CustomerField } from '@/app/lib/definitions'
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';

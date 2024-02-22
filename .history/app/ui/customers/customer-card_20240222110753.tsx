@@ -1,4 +1,4 @@
-import { CustomerField } from '@/app/lib/definitions'
+import { Customer } from '@/app/lib/definitions'
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
@@ -6,7 +6,7 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import { lusitana } from '@/app/ui/fonts';
 
-export default function CustomersCard({ customers }: { customers: CustomerField[] }) {
+export default function CustomersCard({ customers }: { customers: Customer[] }) {
     return (
         <>
             <h1 style={{
@@ -22,8 +22,8 @@ export default function CustomersCard({ customers }: { customers: CustomerField[
                 {customers? customers.map((customer) => (
                     <div style={{
                         borderRadius:"5px",
-                        boxShadow: "0px 0px 10px 2px rgba(0,0,0,0.2)",
-                        margin: "10px"
+                        boxShadow: "0px 0px 10px 2px rgba(0,0,0,0.3)",
+                        margin: "14px"
                     }} key={customer.id} >
                         <List sx={{ width: '100%', minWidth: 320, maxWidth: 320, bgcolor: 'background.paper' }}>
                             <ListItem alignItems="flex-start">

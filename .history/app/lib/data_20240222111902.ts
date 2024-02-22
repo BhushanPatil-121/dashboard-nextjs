@@ -20,7 +20,7 @@ export async function fetchRevenue() {
     // Don't do this in production :)
 
     console.log('Fetching revenue data...');
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 100));
 
     const data = await sql<Revenue>`SELECT * FROM revenue`;
 
@@ -174,7 +174,36 @@ export async function fetchInvoiceById(id: string) {
   }
 }
 
-
+export async function fetchCustomersList() {
+  try{
+    const query = sql`
+      SELECT 
+        id,
+        name,
+        email,
+        image_url 
+      FROM customers
+      ORDER BY name ASC
+    `;
+    const result = await query;
+    // const data  = await sql<Customer>`
+    // SELECT 
+    //   id,
+    //   name,
+    //   email,
+    //   image_url 
+    // FROM customers
+    // ORDER BY name ASC
+    // `;
+    const customers = result.rows;
+    // console.log(customers);
+    
+    return customers;
+  }catch(err){
+    console.error('Database Error Cant Fetch All Customers List:', err);
+    throw new Error('Failed to fetch all customers.');
+  }
+}
 
 export async function fetchCustomers() {
   try {
@@ -182,8 +211,6 @@ export async function fetchCustomers() {
       SELECT
         id,
         name,
-        email,
-        image_url
       FROM customers
       ORDER BY name ASC
     `;

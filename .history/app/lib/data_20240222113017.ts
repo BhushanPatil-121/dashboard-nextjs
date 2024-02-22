@@ -20,7 +20,7 @@ export async function fetchRevenue() {
     // Don't do this in production :)
 
     console.log('Fetching revenue data...');
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 100));
 
     const data = await sql<Revenue>`SELECT * FROM revenue`;
 
@@ -182,8 +182,6 @@ export async function fetchCustomers() {
       SELECT
         id,
         name,
-        email,
-        image_url
       FROM customers
       ORDER BY name ASC
     `;
