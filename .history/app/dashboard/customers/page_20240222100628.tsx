@@ -1,5 +1,5 @@
 import CustomersCard from '@/app/ui/customers/customer-card'
-import { fetchCustomersList } from '@/app/lib/data';
+import { fetchCustfetchAllCustomersomersList } from '@/app/lib/data';
 import {Metadata} from 'next'
  
 export const metadata: Metadata = {
@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   };
 export default async function Page() {
 
-  const customers = await fetchCustomersList();
+  const customers = await fetchAllCustomers();
   // console.log(customers);
   return (
     //render customers 

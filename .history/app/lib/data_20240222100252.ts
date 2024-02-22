@@ -179,17 +179,8 @@ export async function fetchCustomersList() {
     const data  = await sql<Customer>`
     SELECT 
       id,
-      name,
-      email,
-      image_url 
-    FROM customers
-    ORDER BY name ASC
-    `;
-    const customers = data.rows;
-    return customers;
-  }catch(err){
-    console.error('Database Error Cant Fetch All Customers List:', err);
-    throw new Error('Failed to fetch all customers.');
+      
+    `
   }
 }
 

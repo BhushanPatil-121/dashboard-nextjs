@@ -1,7 +1,7 @@
 import { sql } from '@vercel/postgres';
 import {
-  Customer,
   CustomerField,
+  CustomerList,
   CustomersTableType,
   InvoiceForm,
   InvoicesTable,
@@ -173,22 +173,22 @@ export async function fetchInvoiceById(id: string) {
     throw new Error('Failed to fetch invoice.');
   }
 }
-
-export async function fetchCustomersList() {
-  try{
-    const data  = await sql<Customer>`
-    SELECT 
-      id,
-      name,
-      email,
-      image_url 
-    FROM customers
-    ORDER BY name ASC
+export async function fetchAllCustomers() {
+  try {
+    const data = await sql<CustomerList>`
+      SELECT 
+      customers.id,
+      customers. name,
+        email,
+        image_url
+      FROM customers
+      ORDER BY name ASC
     `;
+
     const customers = data.rows;
     return customers;
-  }catch(err){
-    console.error('Database Error Cant Fetch All Customers List:', err);
+  } catch (err) {
+    console.error('Database Error:', err);
     throw new Error('Failed to fetch all customers.');
   }
 }

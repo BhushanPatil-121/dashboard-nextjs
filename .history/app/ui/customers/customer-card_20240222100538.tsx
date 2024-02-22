@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 import Image from 'next/image';
 import { lusitana } from '@/app/ui/fonts';
 
-export default function CustomersCard({ customers }: { customers: Customer[] }) {
+export default function CustomersCard({ customers }: { customers: CustomerList[] }) {
     // console.log(customers)
     return (
         <>

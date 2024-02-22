@@ -79,12 +79,7 @@ export type CustomerField = {
   id: string;
   name: string;
 };
-export type CustomerList = {
-  id: string;
-  name: string;
-  email: string;
-  image_url: string;
-}
+
 export type InvoiceForm = {
   id: string;
   customer_id: string;

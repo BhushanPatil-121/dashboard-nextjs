@@ -1,4 +1,4 @@
-import { Customer } from '@/app/lib/definitions'
+import { Customer} from '@/app/lib/definitions'
 import * as React from 'react';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 import Image from 'next/image';
 import { lusitana } from '@/app/ui/fonts';
 
-export default function CustomersCard({ customers }: { customers: Customer[] }) {
+export default function CustomersCard({ customers }: { customers: CustomerList[] }) {
     // console.log(customers)
     return (
         <>

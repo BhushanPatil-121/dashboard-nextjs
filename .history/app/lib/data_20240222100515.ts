@@ -183,7 +183,7 @@ export async function fetchCustomersList() {
       email,
       image_url 
     FROM customers
-    ORDER BY name ASC
+
     `;
     const customers = data.rows;
     return customers;

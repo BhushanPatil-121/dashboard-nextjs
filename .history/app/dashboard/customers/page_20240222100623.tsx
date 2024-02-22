@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   };
 export default async function Page() {
 
-  const customers = await fetchCustomersList();
+  const customers = await fetchAllCustomers();
   // console.log(customers);
   return (
     //render customers 
