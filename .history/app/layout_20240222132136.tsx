@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     default: 'Acme Dashboard',
   },
   icons:{
-    icon:"/receipt.svg"
+    url
   }
   ,
   description: 'The official Next.js Learn Dashboard built with App Router.',

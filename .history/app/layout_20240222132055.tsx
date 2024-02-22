@@ -7,9 +7,6 @@ export const metadata: Metadata = {
     template: '%s | Acme Dashboard',
     default: 'Acme Dashboard',
   },
-  icons:{
-    icon:"/receipt.svg"
-  }
   ,
   description: 'The official Next.js Learn Dashboard built with App Router.',
   metadataBase: new URL('https://dashboard-nextjs-du8s1o9ms-bhushanpatil-121.vercel.app/'),
